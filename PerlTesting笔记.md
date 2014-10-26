@@ -121,3 +121,14 @@ END2
 
 is_string($string1, $string2, 'are they the same?');
 ```
+### Test::Deep
+```perl
+use Test::More tests => 1;
+use Test::Deep;
+
+my $points = [{x=>50,y=>75,z=>33}, {x=>19, y=>-29,z=>'nil'},{x=>'a',y=>25,z=>'str'}];
+my $is_integer = re('^-?\d+$');
+#ignore() 表示忽略该字段有比较。
+cmp_deeply($points, array_each({x => $is_integer, y => $is_integer, z=>ignore()}),
+	'both sets of points should be integers');
+```
