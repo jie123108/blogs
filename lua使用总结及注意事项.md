@@ -325,7 +325,7 @@ init_by_lua 'require "resty.core"';
 
 #### 使用`nginx-systemtap-toolkit+火焰图`进行性能优化
 
-systemtap及火焰图相关软件下载安装请参见：https://github.com/jie123108/nginx-system-tap-and-FlameGraph
+systemtap及火焰图相关软件下载安装请参见：https://github.com/jie123108/blogs/tree/master/SystemTap
 
 使用sytemtap生成火焰图顺序如下：
 * 将nginx设置成单进程。(多个可能请求可能落到你没处理的进程上了)
