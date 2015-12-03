@@ -62,6 +62,12 @@ if not ok then
 end
 ```
 
+* access_by_lua及rewrite_by_lua中安全的退出
+
+```
+在access_by_lua及rewrite_by_lua中如果要安全的退出，不能直接使用ngx.exit(xxx)。而需要使用return。
+如果要异常退出，可直接使用ngx.exit(4xx/5xx)
+```
 * 客户端停止请求
 
 ```
